@@ -1,0 +1,28 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Cobranza
+    theme:                 jroller
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          cobranza
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        cuota_id:
+          label: ' '
+      list:    ~
+      filter:  ~
+      form:    ~
+      edit:
+        title: Editar Cuota
+      new:
+        title: Nueva Cuota
+        actions:
+          _save: {}
+          cancelar: { ui-icon: circle-close }

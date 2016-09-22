@@ -1,0 +1,47 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           sfGuardGroup
+    theme:                 jroller
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          sf_guard_group
+    with_doctrine_route:   true
+
+    config:
+      fields:
+        name:
+          label: Nombre
+        description:
+          label: Descripcion
+        created_at:
+          label: Fecha de creacion
+          date_format: dd/MM/yyyy
+        updated_at:
+          label: Fecha de actualizacion
+          date_format: dd/MM/yyyy
+        permissions_list:
+          label: Permisos
+        users_list:
+          label: Usuarios
+      list:
+        title: Grupos
+        batch_actions: []
+        object_actions:
+          _delete: ~
+          _edit:   ~
+        display: [=name, description]
+      
+      filter:
+        class: false
+      
+      form:
+        display: [name, description, users_list, permissions_list]
+
+      edit:
+        title: Editando el Grupo "%%name%%"
+
+      new:
+        title: Nuevo Grupo

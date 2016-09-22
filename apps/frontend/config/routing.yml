@@ -1,0 +1,398 @@
+socio_socioDeudor:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Socio
+    module:               socioDeudor
+    prefix_path:          /socioDeudor
+    column:               id
+    with_wildcard_routes: true
+
+cuota_cuota:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Cuota
+    module:               cuota
+    prefix_path:          /cuota
+    column:               id
+    with_wildcard_routes: true
+
+socio_socioConDeuda:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Socio
+    module:               socioConDeuda
+    prefix_path:          /socioConDeuda
+    column:               id
+    with_wildcard_routes: true
+
+cobranza_automatica:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                CobranzaAutomatica
+    module:               cobranzaAutomatica
+    prefix_path:          /cobranzaAutomatica
+    column:               id
+    with_wildcard_routes: true
+
+cuota:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Cuota
+    module:               pagoAdelantado
+    prefix_path:          /pagoAdelantado
+    column:               id
+    with_wildcard_routes: true
+
+valor_cuota:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                ValorCuota
+    module:               valorCuota
+    prefix_path:          /valorCuota
+    column:               id
+    with_wildcard_routes: true
+
+cobranza:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Cobranza
+    module:               cobranza
+    prefix_path:          /cobranza
+    column:               id
+    with_wildcard_routes: true
+
+socio:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Socio
+    module:               socio
+    prefix_path:          /socio
+    column:               id
+    with_wildcard_routes: true
+
+guarda:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Guarda
+    module:               guarda
+    prefix_path:          /guarda
+    column:               id
+    with_wildcard_routes: true
+
+consulta_punto_encuentro:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                ConsultaPuntoEncuentro
+    module:               consultaPuntoEncuentro
+    prefix_path:          /consultaPuntoEncuentro
+    column:               id
+    with_wildcard_routes: true
+
+supervision:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Supervision
+    module:               supervision
+    prefix_path:          /supervision
+    column:               id
+    with_wildcard_routes: true
+
+ayuda_economica:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                AyudaEconomica
+    module:               ayudaEconomica
+    prefix_path:          /ayudaEconomica
+    column:               id
+    with_wildcard_routes: true
+
+citacion:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Citacion
+    module:               citacion
+    prefix_path:          /citacion
+    column:               id
+    with_wildcard_routes: true
+
+entrevista:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Entrevista
+    module:               entrevista
+    prefix_path:          /entrevista
+    column:               id
+    with_wildcard_routes: true
+
+acta_acuerdo_acta:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                ActaAcuerdo
+    module:               acta
+    prefix_path:          /acta
+    column:               id
+    with_wildcard_routes: true
+
+hoja_ruta:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                HojaRuta
+    module:               hojaRuta
+    prefix_path:          /hojaRuta
+    column:               id
+    with_wildcard_routes: true
+
+acta_compromiso:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                ActaCompromiso
+    module:               actaCompromiso
+    prefix_path:          /actaCompromiso
+    column:               id
+    with_wildcard_routes: true
+
+acta_acuerdo:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                ActaAcuerdo
+    module:               actaAcuerdo
+    prefix_path:          /actaAcuerdo
+    column:               id
+    with_wildcard_routes: true
+
+visita_domiciliaria:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                VisitaDomiciliaria
+    module:               visitaDomiciliaria
+    prefix_path:          /visitaDomiciliaria
+    column:               id
+    with_wildcard_routes: true
+
+acta_telefonica:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                ActaTelefonica
+    module:               actaTelefonica
+    prefix_path:          /actaTelefonica
+    column:               id
+    with_wildcard_routes: true
+
+intervencion_intervencion:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Intervencion
+    module:               intervencion
+    prefix_path:          /intervencion
+    column:               id
+    with_wildcard_routes: true
+
+intervencion:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Intervencion
+    module:               Intervencion
+    prefix_path:          /Intervencion
+    column:               id
+    with_wildcard_routes: true
+
+fuero_familia:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                FueroFamilia
+    module:               fueroFamilia
+    prefix_path:          /fueroFamilia
+    column:               id
+    with_wildcard_routes: true
+
+hogar:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Hogar
+    module:               hogar
+    prefix_path:          /hogar
+    column:               id
+    with_wildcard_routes: true
+
+medida_abrigo_medidaAbrigoSinFechaEjecucion:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                MedidaAbrigo
+    module:               medidaAbrigoSinFechaEjecucion
+    prefix_path:          /medidaAbrigoSinFechaEjecucion
+    column:               id
+    with_wildcard_routes: true
+
+medida_abrigo_medidaAbrigoVencida:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                MedidaAbrigo
+    module:               medidaAbrigoVencida
+    prefix_path:          /medidaAbrigoVencida
+    column:               id
+    with_wildcard_routes: true
+
+medida_abrigo:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                MedidaAbrigo
+    module:               medidaAbrigo
+    prefix_path:          /medidaAbrigo
+    column:               id
+    with_wildcard_routes: true
+
+denuncia_agregarConvivienteDenuncia:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Denuncia
+    module:               agregarConvivienteDenuncia
+    prefix_path:          /agregarConvivienteDenuncia
+    column:               id
+    with_wildcard_routes: true
+
+conviviente_denuncia:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                ConvivienteDenuncia
+    module:               convivienteDenuncia
+    prefix_path:          /convivienteDenuncia
+    column:               Array
+    with_wildcard_routes: true
+
+expediente_exp:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Expediente
+    module:               exp
+    prefix_path:          /exp
+    column:               id
+    with_wildcard_routes: true
+
+escuela_escuelitas:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Escuela
+    module:               escuelitas
+    prefix_path:          /escuelitas
+    column:               id
+    with_wildcard_routes: true
+
+denuncia_denuncias:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Denuncia
+    module:               denuncias
+    prefix_path:          /denuncias
+    column:               id
+    with_wildcard_routes: true
+
+denuncia:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Denuncia
+    module:               denuncia
+    prefix_path:          /denuncia
+    column:               id
+    with_wildcard_routes: true
+
+escuela:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Escuela
+    module:               escuela
+    prefix_path:          /escuela
+    column:               id
+    with_wildcard_routes: true
+
+categoria_vulneracion_expediente:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                CategoriaVulneracionExpediente
+    module:               categoria_vulneracion_expediente
+    prefix_path:          /categoria_vulneracion_expediente
+    column:               id
+    with_wildcard_routes: true
+
+equipo:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Equipo
+    module:               equipo
+    prefix_path:          /equipo
+    column:               id
+    with_wildcard_routes: true
+
+modo_ingreso:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                ModoIngreso
+    module:               modo_ingreso
+    prefix_path:          /modo_ingreso
+    column:               id
+    with_wildcard_routes: true
+
+conviviente:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Conviviente
+    module:               conviviente
+    prefix_path:          /conviviente
+    column:               id
+    with_wildcard_routes: true
+
+expediente_expedientes:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Expediente
+    module:               expedientes
+    prefix_path:          /expedientes
+    column:               id
+    with_wildcard_routes: true
+
+expediente:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Expediente
+    module:               expediente
+    prefix_path:          /expediente
+    column:               id
+    with_wildcard_routes: true
+  
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/10-Routing
+
+sf_guard_signin:
+  url:   /login
+  param: { module: sfGuardAuth, action: signin }
+
+sf_guard_signout:
+  url:   /logout
+  param: { module: sfGuardAuth, action: signout }
+
+sf_guard_password:
+  url:   /request_password
+  param: { module: sfGuardAuth, action: password }
+
+# default rules
+homepage:
+  url:   /
+  param: { module: index, action: index }
+
+# generic rules
+# please, remove them by adding more specific rules
+default_index:
+  url:   /:module
+  param: { action: index }
+
+default:
+  url:   /:module/:action/*
+
+# si pongo esto deja de andar el reasignar
+
+#default_index:
+#  url:   /:module.:sf_format
+#  param: { action: index, sf_format: html }
+ 
+#default:
+#  url:   /:module/:action.:sf_format/*
+#  param: { sf_format: html }

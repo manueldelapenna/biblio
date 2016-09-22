@@ -1,0 +1,41 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Socio
+    theme:                 jroller
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          socio_socioConDeuda
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        dni:
+          label: DNI
+        total:
+          label: Total deuda $
+          is_real: true
+        deuda_mayor_a:
+          label: Desde deuda $
+        deuda_menor_a:
+          label: Hasta deuda $
+      list:
+        actions:
+          generar_recibos_listado: {}
+        title: Listado de Socios Deudores
+        batch_actions: []
+        object_actions:
+          _show: {}
+        display: [numero_socio, apellido, nombre, dni, total]
+        table_method: getConDeuda
+      filter:
+        display: [numero_socio, nombre, apellido, dni, domicilio, localidad, descuento_familiar, deuda_mayor_a, deuda_menor_a]
+      form:    ~
+      edit:
+        title: Editar datos Socio
+      new:
+        title: Nuevo Socio

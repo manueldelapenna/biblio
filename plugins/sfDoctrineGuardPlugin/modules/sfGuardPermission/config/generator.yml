@@ -1,0 +1,48 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           sfGuardPermission
+    theme:                 jroller
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          sf_guard_permission
+    with_doctrine_route:   true
+
+    config:
+      fields:
+        name:
+          label: Nombre
+        description:
+          label: Descripcion
+        created_at:
+          label: Fecha de creacion
+          date_format: dd/MM/yyyy
+        updated_at:
+          label: Fecha de actualizacion
+          date_format: dd/MM/yyyy
+        groups_list:
+          label: Grupos
+        users_list:
+          label: Usuarios
+      
+      filter:
+        class: false
+      
+      list:
+        title: Permisos
+        batch_actions: []
+        object_actions:
+          _delete: ~
+          _edit:   ~
+        display: [=name, description]
+
+      edit:
+        title: Editando el Permiso "%%name%%"
+
+      new:
+        title: Nuevo Permiso
+
+      form:
+        display: [name, description, groups_list, users_list]

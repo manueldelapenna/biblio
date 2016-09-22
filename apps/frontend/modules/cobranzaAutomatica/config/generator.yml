@@ -1,0 +1,34 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           CobranzaAutomatica
+    theme:                 jroller
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          cobranza_automatica
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        mes:
+          label: 'Mes'
+        anio:
+          label: 'Año'
+        valor_cuota:
+          label: 'Valor Cuota'
+      list:
+        title: Listado de cobranzas a generar
+        table_method: getSinGenerar
+        display: [mes,anio,valor_cuota, valor_cuota_descuento]
+        batch_actions: []
+        object_actions:
+          generar: {}
+        actions: {}
+      filter:  ~
+      form:    ~
+      edit:    ~
+      new:     ~

@@ -1,0 +1,32 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Socio
+    theme:                 jroller
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          socio
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        dni:
+          label: DNI
+      list:
+        title: Listado de Socios
+        batch_actions: []
+        actions:
+          exportar_a_excel: {ui-icon: script}
+          _new: ~
+        display: [numero_socio, apellido, nombre, dni]
+      filter:
+        display: [numero_socio, apellido, nombre, dni, domicilio, localidad, telefono, celular, mail, descuento_familiar, tiene_deuda]
+      form:    ~
+      edit:
+        title: Editar datos Socio
+      new:
+        title: Nuevo Socio

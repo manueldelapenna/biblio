@@ -1,0 +1,99 @@
+# config/doctrine/schema.yml
+CobranzaAutomatica:
+  columns:
+    mes:
+      type: integer
+      notnull: true
+    anio:
+      type: integer
+      notnull: true
+    valor_cuota:
+      type: integer
+    valor_cuota_descuento:
+      type: integer
+    generada:
+      type: boolean
+      default: false
+
+Socio:
+  columns:
+    numero_socio:
+      type: integer
+      notnull: true
+      unique: true
+    nombre:
+      type: string(200)
+      notnull: true
+    apellido:
+      type: string(200)
+      notnull: true
+    dni:
+      type: string(100)
+      notnull: true
+    domicilio:
+      type: string(200)
+    localidad:
+      type: string(100)
+    codigo_postal:
+      type: string(100)
+    telefono:
+      type: string(100)
+    celular:
+      type: string(100)
+    mail:
+      type: string(100)
+    descuento_familiar:
+      type: boolean
+      default: false
+    
+Cuota:
+  columns:
+    socio_id:
+      type: integer
+      notnull: true
+    mes:
+      type: integer
+      notnull: true
+    anio:
+      type: integer
+      notnull: true
+    monto:
+      type: integer
+      notnull: true
+    pagada:
+      type: boolean
+      notnull: true
+      default: false
+  relations:
+    Socio: { onDelete: CASCADE, local: socio_id, foreign: id, foreignAlias: Cuotas }
+      
+Cobrador:
+  columns:
+    nombre:
+      type: string(200)
+    apellido:
+      type: string(200)
+
+LugarCobro:
+  columns:
+    nombre:
+      type: string(200)
+    
+Cobranza:
+  columns:
+    fecha: 
+      type: date
+      notnull: true
+    cobrador_id:
+      type: integer
+      notnull: true
+    lugar_cobro_id:
+      type: integer
+      notnull: true
+    cuota_id:
+      type: integer
+      notnull: true
+  relations:
+    Cobrador: { onDelete: RESTRICT, local: cobrador_id, foreign: id, foreignAlias: Cobranzas }
+    LugarCobro: { onDelete: RESTRICT, local: lugar_cobro_id, foreign: id, foreignAlias: Cobranzas }
+    Cuota: { onDelete: CASCADE, local: cuota_id , foreign: id, foreignAlias: Cobranzas }

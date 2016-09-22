@@ -1,0 +1,26 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Cobrador
+    theme:                 jroller
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          cobrador
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  ~
+      list:
+        title: Listado de cobradores
+        batch_actions: []
+        display: [nombre, apellido]
+      filter:  ~
+      form:    ~
+      edit:
+        title: Editar Cobrador
+      new:
+        title: Nuevo Cobrador

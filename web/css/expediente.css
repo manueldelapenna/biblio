@@ -1,0 +1,33 @@
+h1.SaltoDePagina{
+    PAGE-BREAK-AFTER: always
+}
+#imprimir{
+	background: #FFFFFF;
+	font-size:100%;
+}
+.negrita{	
+	font-weight:bold;
+}
+.negritaCentrado{	
+	font-weight:bold;
+	text-align:center;
+}
+#encabezado{
+    width: 825px;
+    height: 110px;
+	background: url(../images/encabezadoImpresion.png) no-repeat;
+}
+#columnaIzquierda{
+	width:50%;
+	float:left;
+}
+#columnaDerecha{
+	width:50%;
+	float:right;
+}
+#limpiar{
+	clear:both;
+}
+.alinearDerecha{
+	float:right;
+}

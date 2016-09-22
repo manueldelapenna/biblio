@@ -1,0 +1,108 @@
+#formulario_personalizado .ui-corner-all{
+	color: #FF0000;
+}
+#intervencion_nombre_acompanante{
+	width:500px;
+	height:12px;
+}
+#intervencion_cita_textual_acompanante{
+	width:600px;
+	height:100px;
+}
+#intervencion_evaluacion_ERDP{
+	width:600px;
+	height:100px;
+}
+
+#intervencion_medidas_restitucion_derecho{
+	width:600px;
+	height:100px;
+}
+
+#intervencion_evaluacion_ERDP{
+	width:600px;
+	height:100px;
+}
+
+#intervencion_medidas_estrategia_restitucion{
+	width:600px;
+	height:100px;
+}
+
+#acta_telefonica_comunicacion_con{
+	width:514px;
+}
+
+#acta_telefonica_institucion{
+	width:550px;
+}
+
+#acta_telefonica_objetivo{
+	width:600px;
+	height:100px;
+}
+
+#acta_telefonica_contenido_conversacion{
+	width:600px;
+	height:100px;
+}
+
+#acta_telefonica_observaciones{
+	width:600px;
+	height:100px;
+}
+
+#visita_domiciliaria_objetivo_visita{
+	width:600px;
+	height:100px;
+}
+
+#visita_domiciliaria_descripcion{
+	width:600px;
+	height:100px;
+}
+
+#visita_domiciliaria_estrategias_acordadas{
+	width:600px;
+	height:100px;
+}
+
+#visita_domiciliaria_domicilio{
+	width:545px;
+	height:12px;
+}
+
+#visita_domiciliaria_barrio{
+	width:562px;
+	height:12px;
+}
+
+#hoja_ruta_domicilio{
+	width:545px;
+	height:12px;
+}
+
+#hoja_ruta_barrio{
+	width:562px;
+	height:12px;
+}
+
+#hoja_ruta_asunto{
+	width:600px;
+	height:100px;
+}
+
+#hoja_ruta_observaciones{
+	width:600px;
+	height:100px;
+}
+
+#fuero_familia_convivientes_list{
+	height:150px;
+	width:300px;
+}
+
+#denuncia_convivientes_list{
+	height:150px;
+	width:300px;
+}

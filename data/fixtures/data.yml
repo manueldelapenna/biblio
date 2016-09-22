@@ -1,0 +1,260 @@
+sfGuardGroup:
+  sfGuardGroup_1:
+    name: punto_encuentro
+    description: 'personal de punto de encuentro'
+    created_at: '2011-08-26 17:03:17'
+    updated_at: '2011-08-26 17:03:17'
+  sfGuardGroup_2:
+    name: administrador
+    description: 'administrador del sistema'
+    created_at: '2011-08-26 17:19:32'
+    updated_at: '2011-08-26 17:19:32'
+  sfGuardGroup_3:
+    name: seguimiento
+    description: 'personal de seguimiento (unicamente consulta de expedientes)'
+    created_at: '2011-08-26 18:21:01'
+    updated_at: '2011-08-26 18:21:01'
+sfGuardGroupPermission:
+  sfGuardGroupPermission_1_2:
+    Group: sfGuardGroup_1
+    Permission: sfGuardPermission_2
+    created_at: '2011-08-26 17:20:16'
+    updated_at: '2011-08-26 17:20:16'
+  sfGuardGroupPermission_1_3:
+    Group: sfGuardGroup_1
+    Permission: sfGuardPermission_3
+    created_at: '2011-08-26 17:21:29'
+    updated_at: '2011-08-26 17:21:29'
+  sfGuardGroupPermission_1_4:
+    Group: sfGuardGroup_1
+    Permission: sfGuardPermission_4
+    created_at: '2011-08-26 17:21:49'
+    updated_at: '2011-08-26 17:21:49'
+  sfGuardGroupPermission_1_5:
+    Group: sfGuardGroup_1
+    Permission: sfGuardPermission_5
+    created_at: '2011-08-26 17:22:11'
+    updated_at: '2011-08-26 17:22:11'
+  sfGuardGroupPermission_1_7:
+    Group: sfGuardGroup_1
+    Permission: sfGuardPermission_7
+    created_at: '2011-08-26 17:36:19'
+    updated_at: '2011-08-26 17:36:19'
+  sfGuardGroupPermission_1_8:
+    Group: sfGuardGroup_1
+    Permission: sfGuardPermission_8
+    created_at: '2011-08-26 17:36:35'
+    updated_at: '2011-08-26 17:36:35'
+  sfGuardGroupPermission_1_9:
+    Group: sfGuardGroup_1
+    Permission: sfGuardPermission_9
+    created_at: '2011-08-26 18:37:12'
+    updated_at: '2011-08-26 18:37:12'
+  sfGuardGroupPermission_2_1:
+    Group: sfGuardGroup_2
+    Permission: sfGuardPermission_1
+    created_at: '2011-08-26 17:20:45'
+    updated_at: '2011-08-26 17:20:45'
+  sfGuardGroupPermission_2_2:
+    Group: sfGuardGroup_2
+    Permission: sfGuardPermission_2
+    created_at: '2011-08-26 17:20:45'
+    updated_at: '2011-08-26 17:20:45'
+  sfGuardGroupPermission_2_3:
+    Group: sfGuardGroup_2
+    Permission: sfGuardPermission_3
+    created_at: '2011-08-26 17:22:52'
+    updated_at: '2011-08-26 17:22:52'
+  sfGuardGroupPermission_2_4:
+    Group: sfGuardGroup_2
+    Permission: sfGuardPermission_4
+    created_at: '2011-08-26 17:22:52'
+    updated_at: '2011-08-26 17:22:52'
+  sfGuardGroupPermission_2_5:
+    Group: sfGuardGroup_2
+    Permission: sfGuardPermission_5
+    created_at: '2011-08-26 17:25:05'
+    updated_at: '2011-08-26 17:25:05'
+  sfGuardGroupPermission_2_6:
+    Group: sfGuardGroup_2
+    Permission: sfGuardPermission_6
+    created_at: '2011-08-26 18:26:00'
+    updated_at: '2011-08-26 18:26:00'
+  sfGuardGroupPermission_2_7:
+    Group: sfGuardGroup_2
+    Permission: sfGuardPermission_7
+    created_at: '2011-08-26 17:36:19'
+    updated_at: '2011-08-26 17:36:19'
+  sfGuardGroupPermission_2_8:
+    Group: sfGuardGroup_2
+    Permission: sfGuardPermission_8
+    created_at: '2011-08-26 17:36:35'
+    updated_at: '2011-08-26 17:36:35'
+  sfGuardGroupPermission_2_9:
+    Group: sfGuardGroup_2
+    Permission: sfGuardPermission_9
+    created_at: '2011-08-26 18:26:00'
+    updated_at: '2011-08-26 18:26:00'
+  sfGuardGroupPermission_2_10:
+    Group: sfGuardGroup_2
+    Permission: sfGuardPermission_10
+    created_at: '2011-09-12 15:09:40'
+    updated_at: '2011-09-12 15:09:40'
+  sfGuardGroupPermission_3_7:
+    Group: sfGuardGroup_3
+    Permission: sfGuardPermission_7
+    created_at: '2011-08-26 18:21:01'
+    updated_at: '2011-08-26 18:21:01'
+  sfGuardGroupPermission_3_8:
+    Group: sfGuardGroup_3
+    Permission: sfGuardPermission_8
+    created_at: '2011-08-26 18:21:01'
+    updated_at: '2011-08-26 18:21:01'
+sfGuardPermission:
+  sfGuardPermission_1:
+    name: borrar_expediente
+    description: 'permite borrar un expediente'
+    created_at: '2011-08-26 17:00:53'
+    updated_at: '2011-08-26 17:00:53'
+  sfGuardPermission_2:
+    name: agregar_expediente
+    description: 'permite agregar un expediente'
+    created_at: '2011-08-26 17:20:16'
+    updated_at: '2011-08-26 17:20:16'
+  sfGuardPermission_3:
+    name: editar_expediente
+    description: 'permite editar un expediente'
+    created_at: '2011-08-26 17:21:29'
+    updated_at: '2011-08-26 17:21:29'
+  sfGuardPermission_4:
+    name: agregar_conviviente
+    description: 'permite agregar un conviviente'
+    created_at: '2011-08-26 17:21:49'
+    updated_at: '2011-08-26 17:21:49'
+  sfGuardPermission_5:
+    name: editar_conviviente
+    description: 'permite editar un conviviente'
+    created_at: '2011-08-26 17:22:11'
+    updated_at: '2011-08-26 17:22:11'
+  sfGuardPermission_6:
+    name: borrar_conviviente
+    description: 'permite borrar un conviviente'
+    created_at: '2011-08-26 17:22:37'
+    updated_at: '2011-08-26 17:22:37'
+  sfGuardPermission_7:
+    name: mostrar_expediente
+    description: 'permite mostrar el contenido de un expediente'
+    created_at: '2011-08-26 17:36:19'
+    updated_at: '2011-08-26 17:36:19'
+  sfGuardPermission_8:
+    name: mostrar_conviviente
+    description: 'permite mostrar el contenido de un conviviente'
+    created_at: '2011-08-26 17:36:35'
+    updated_at: '2011-08-26 17:36:35'
+  sfGuardPermission_9:
+    name: reasignar_expediente
+    description: 'permite reasignar un expediente a un nuevo equipo'
+    created_at: '2011-08-26 18:25:42'
+    updated_at: '2011-08-26 18:25:42'
+  sfGuardPermission_10:
+    name: administrar
+    description: 'permite administrar el sistema'
+    created_at: '2011-09-12 15:09:25'
+    updated_at: '2011-09-12 15:09:25'
+sfGuardUser:
+  sfGuardUser_1:
+    first_name: manuel
+    last_name: 'De la Penna'
+    email_address: manu_dela@hotmail.com
+    username: manu_dela
+    algorithm: sha1
+    salt: '1234'
+    password: 1234
+    is_active: true
+    is_super_admin: false
+    last_login: '2011-09-21 16:16:16'
+    created_at: '2011-08-12 17:54:36'
+    updated_at: '2011-09-21 16:16:16'
+  sfGuardUser_2:
+    first_name: punto
+    last_name: ''
+    email_address: punto@punto
+    username: punto
+    algorithm: sha1
+    salt: '1234'
+    password: 1234
+    is_active: true
+    is_super_admin: false
+    last_login: '2011-09-14 19:30:53'
+    created_at: '2011-08-26 18:05:55'
+    updated_at: '2011-09-14 19:30:53'
+  sfGuardUser_3:
+    first_name: seguimiento
+    last_name: seg
+    email_address: seg@seg
+    username: seguimiento
+    algorithm: sha1
+    salt: '1234'
+    password: 1234
+    is_active: true
+    is_super_admin: false
+    last_login: '2011-08-26 18:39:55'
+    created_at: '2011-08-26 18:21:54'
+    updated_at: '2011-08-26 18:39:55'
+sfGuardUserGroup:
+  sfGuardUserGroup_1_2:
+    User: sfGuardUser_1
+    Group: sfGuardGroup_2
+    created_at: '2011-08-26 17:19:32'
+    updated_at: '2011-08-26 17:19:32'
+  sfGuardUserGroup_2_1:
+    User: sfGuardUser_2
+    Group: sfGuardGroup_1
+    created_at: '2011-08-26 18:06:03'
+    updated_at: '2011-08-26 18:06:03'
+  sfGuardUserGroup_3_3:
+    User: sfGuardUser_3
+    Group: sfGuardGroup_3
+    created_at: '2011-08-26 18:22:01'
+    updated_at: '2011-08-26 18:22:01'
+sfGuardUserPermission:
+  sfGuardUserPermission_1_1:
+    User: sfGuardUser_1
+    Permission: sfGuardPermission_1
+    created_at: '2011-08-26 17:23:50'
+    updated_at: '2011-08-26 17:23:50'
+  sfGuardUserPermission_1_2:
+    User: sfGuardUser_1
+    Permission: sfGuardPermission_2
+    created_at: '2011-08-26 17:23:59'
+    updated_at: '2011-08-26 17:23:59'
+  sfGuardUserPermission_1_3:
+    User: sfGuardUser_1
+    Permission: sfGuardPermission_3
+    created_at: '2011-08-26 17:24:11'
+    updated_at: '2011-08-26 17:24:11'
+  sfGuardUserPermission_1_4:
+    User: sfGuardUser_1
+    Permission: sfGuardPermission_4
+    created_at: '2011-08-26 17:24:25'
+    updated_at: '2011-08-26 17:24:25'
+  sfGuardUserPermission_1_5:
+    User: sfGuardUser_1
+    Permission: sfGuardPermission_5
+    created_at: '2011-08-26 17:24:30'
+    updated_at: '2011-08-26 17:24:30'
+  sfGuardUserPermission_1_6:
+    User: sfGuardUser_1
+    Permission: sfGuardPermission_6
+    created_at: '2011-08-26 17:24:41'
+    updated_at: '2011-08-26 17:24:41'
+  sfGuardUserPermission_1_7:
+    User: sfGuardUser_1
+    Permission: sfGuardPermission_7
+    created_at: '2011-08-26 17:36:19'
+    updated_at: '2011-08-26 17:36:19'
+  sfGuardUserPermission_1_8:
+    User: sfGuardUser_1
+    Permission: sfGuardPermission_8
+    created_at: '2011-08-26 17:36:35'
+    updated_at: '2011-08-26 17:36:35'
