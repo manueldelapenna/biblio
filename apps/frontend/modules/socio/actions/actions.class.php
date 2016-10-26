@@ -385,6 +385,8 @@ class socioActions extends autoSocioActions
         $col++;
         $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow($col, $row, 'Dto. Flia.');
         $col++;
+		$objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow($col, $row, 'Ultima Cuota Paga');
+        $col++;
 
         foreach ($socios as $socio) {
             $col = 0;
@@ -417,6 +419,8 @@ class socioActions extends autoSocioActions
             }
             
             $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow($col, $row, $valor);
+            $col++;
+			$objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow($col, $row, $socio->getUltimaCuotaPaga());
             $col++;
         }
 

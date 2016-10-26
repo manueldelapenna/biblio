@@ -35,4 +35,24 @@ class Socio extends BaseSocio
 	return 0;	
     
   }  
+  
+  public function getUltimaCuotaPaga()
+  {
+    $q= Doctrine_Query::create()
+            ->select('*')
+            ->from('Cuota c')
+			->where('c.socio_id = ?', $this->getId())
+            ->andWhere('c.pagada = ?', true)
+			->orderBy('c.anio DESC, c.mes DESC');
+			
+	$result = $q->execute();
+	
+	if (count($result)>0){
+		$result = $result[0];
+		return $result->getMes() . '/' . $result->getAnio();
+	}
+    
+	return 'Sin Cuotas Pagas';	
+    
+  }  
 }
