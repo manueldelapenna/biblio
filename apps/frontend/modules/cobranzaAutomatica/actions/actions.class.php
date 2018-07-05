@@ -26,23 +26,26 @@ class cobranzaAutomaticaActions extends autoCobranzaAutomaticaActions
     $valor = $request->getParameter('valor');
     $valorDescuento = $request->getParameter('valorDescuento');
   
-    
-    $q = Doctrine_Query::create()
-                ->select('*')
-                ->from('CobranzaAutomatica ca')
-                ->where('ca.id =?',$cobranzaAutomticaId);
-    
-    $cobranzaAutomatica = $q->execute();
-    $cobranzaAutomatica = $cobranzaAutomatica[0];
-    $cobranzaAutomatica->setValorCuota($valor);
-    $cobranzaAutomatica->setValorCuotaDescuento($valorDescuento);
-    
-    //crear cuotas a todos los usuarios q no pagaron adelantado
-    
-    $mes = $cobranzaAutomatica->getMes();
-    $anio = $cobranzaAutomatica->getAnio();
-    
-    //buscar socios que no tengan la cuota del mes generado paga
+    $conn = Doctrine_Manager::getInstance()->getCurrentConnection();
+    try {
+        $conn->beginTransaction();
+
+        $q = Doctrine_Query::create()
+                    ->select('*')
+                    ->from('CobranzaAutomatica ca')
+                    ->where('ca.id =?',$cobranzaAutomticaId);
+
+        $cobranzaAutomatica = $q->execute();
+        $cobranzaAutomatica = $cobranzaAutomatica[0];
+        $cobranzaAutomatica->setValorCuota($valor);
+        $cobranzaAutomatica->setValorCuotaDescuento($valorDescuento);
+
+        //crear cuotas a todos los usuarios q no pagaron adelantado
+
+        $mes = $cobranzaAutomatica->getMes();
+        $anio = $cobranzaAutomatica->getAnio();
+
+        //buscar socios que no tengan la cuota del mes generado paga
         $query = "select soc.id, soc.descuento_familiar
                   from socio soc
                   where soc.id not in(
@@ -51,11 +54,11 @@ class cobranzaAutomaticaActions extends autoCobranzaAutomaticaActions
                         where (c.anio = '$anio') 
                             and (c.mes = '$mes'))";
 
-        $con = Doctrine_Manager::getInstance()->getCurrentConnection();
-        $st = $con->execute($query);
-        
+
+        $st = $conn->execute($query);
+
         $socios = $st->fetchAll();
-        
+
         foreach($socios as $socio){
             $cuota = new Cuota();
             $cuota->setMes($mes);
@@ -70,9 +73,12 @@ class cobranzaAutomaticaActions extends autoCobranzaAutomaticaActions
             $cuota->save();
         }
 
-    $cobranzaAutomatica->setGenerada(true);
-    $cobranzaAutomatica->save();
-    
+        $cobranzaAutomatica->setGenerada(true);
+        $cobranzaAutomatica->save();
+		$conn->commit();
+    } catch(Doctrine_Exception $e) {
+        $conn->rollback();
+    }
   }
   
   protected function processForm(sfWebRequest $request, sfForm $form)
